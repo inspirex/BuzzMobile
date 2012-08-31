@@ -1,0 +1,306 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>BuzzMobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+
+<script src="lquery-mobile/myscript.js"></script>
+<link rel="stylesheet" href="jquery-mobile/mystyles.css" />
+
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="/phonegap.js" type="text/javascript"></script>
+</head> 
+<body> 
+//homepage
+<div data-role="page" id="home" data-title="Welcome to BuzzMobile">
+	<div data-role="header">
+		<div data-role="navbar">
+        <ul>
+        <li><a href="#home" 
+					data-role="button"
+					data-icon="home"
+					>Home</a></li>
+					<li><a href="#" 
+					data-role="button"
+					data-icon="arrow-r"
+					>Blog</a></li>
+					<li><a href="#videos" 
+					data-role="button"
+					data-icon="arrow-r"
+					>Videos</a></li>
+					<li><a href="#photos" 
+					data-role="button"
+					data-icon="arrow-r"
+					>Photos</a></li>
+					<li><a href="#tweets" 
+					data-role="button"
+					data-icon="arrow-r"
+					>Tweets</a></li>  
+        
+        
+        </ul>
+        </div>
+	</div>
+	<div data-role="content" data-inline="true">
+   		<ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Event Categories</li>
+			<li id="concert"><a href="#concerts">Concerts</a></li>
+            <li id="conference"><a href="#conference">Conferences</a></li>
+			<li id="church" onClick="GetEvent()"><a href="#church">Church Programs</a></li>
+            <li id="serminar"><a href="#serminars">Serminars</a></li>
+            <li id="training"><a href="#training">Trainings</a></li>
+           <li id="talk"><a href="#talk">Talk Shows</a></li>
+           <li id="others"><a href="#others">Others</a></li>
+          
+                  
+		</ul>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//concert page
+<div data-role="page" id="concerts" data-position="fixed" data-title="Upcoming Concerts">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+        <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//conference page
+<div data-role="page" id="conference" data-title="Upcoming Conferences" data-position="fixed">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+     <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//churchpage
+<div data-role="page" id="church" data-position="fixed" data-title="Upcoming Church events">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+//serminar page
+<div data-role="page" id="serminars" data-position="fixed">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//training page
+<div data-role="page" id="training" data-position="fixed" data-title="Upcoming Trainings">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+
+//talkshow page
+<div data-role="page" id="talk" data-position="fixed" data-title="Upcoming Talkshows">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//others page
+<div data-role="page" id="others">
+	<div data-role="header" data-position="fixed" data-title="Other events">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+</body>
+</html><!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>BuzzMobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+
+<script src="lquery-mobile/myscript.js"></script>
+<link rel="stylesheet" href="jquery-mobile/mystyles.css" />
+
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="/phonegap.js" type="text/javascript"></script>
+</head> 
+<body> 
+//homepage
+<div data-role="page" id="home" data-title="Welcome to BuzzMobile">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+	</div>
+	<div data-role="content" data-inline="true">
+   		<ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Event Categories</li>
+			<li id="concert"><a href="#concerts">Concerts</a></li>
+            <li id="conference"><a href="#conference">Conferences</a></li>
+			<li id="church" onClick="GetEvent()"><a href="#church">Church Programs</a></li>
+            <li id="serminar"><a href="#serminars">Serminars</a></li>
+            <li id="training"><a href="#training">Trainings</a></li>
+           <li id="talk"><a href="#talk">Talk Shows</a></li>
+           <li id="others"><a href="#others">Others</a></li>
+          
+                  
+		</ul>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//concert page
+<div data-role="page" id="concerts" data-position="fixed" data-title="Upcoming Concerts">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+        <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//conference page
+<div data-role="page" id="conference" data-title="Upcoming Conferences" data-position="fixed">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+     <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//churchpage
+<div data-role="page" id="church" data-position="fixed" data-title="Upcoming Church events">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+//serminar page
+<div data-role="page" id="serminars" data-position="fixed">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//training page
+<div data-role="page" id="training" data-position="fixed" data-title="Upcoming Trainings">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+
+//talkshow page
+<div data-role="page" id="talk" data-position="fixed" data-title="Upcoming Talkshows">
+	<div data-role="header">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+//others page
+<div data-role="page" id="others">
+	<div data-role="header" data-position="fixed" data-title="Other events">
+		<h1>BuzzMobile</h1>
+         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+</body>
+</html>
